@@ -269,6 +269,65 @@ ul{list-style:none}
   font-size: 1cqw; line-height:1.4; color:var(--muted);
 }
 
+/* ---------- PORTFOLIO ---------- */
+.portfolio-grid{
+  margin-top: 2.4cqw;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2cqw;
+  flex:1; min-height:0;
+}
+.port-card{
+  background:#fff;
+  border:1px solid #e2e3e7;
+  border-radius:8px;
+  padding: 1.4cqw 1.3cqw 1.2cqw;
+  display:flex; flex-direction:column;
+  justify-content:space-between;
+  gap: .6cqw;
+  min-width:0; min-height:0;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  position:relative; overflow:hidden;
+}
+.port-card:hover{
+  transform: translateY(-3px);
+  border-color: var(--blue);
+  box-shadow: 0 10px 22px rgba(31,109,214,.18);
+}
+.port-card::after{
+  content: "\2197"; /* arrow up-right */
+  position:absolute; top: .8cqw; right: 1cqw;
+  font-family:'Anton',sans-serif;
+  font-size: 1.6cqw; color: var(--muted);
+}
+.port-tag{
+  display:inline-block;
+  align-self:flex-start;
+  font-family:'Anton',sans-serif;
+  font-size: 1.05cqw;
+  letter-spacing:.08em;
+  padding: .35em .7em;
+  border-radius: 4px;
+  color:#fff; background: var(--ink);
+}
+.port-card--vimeo .port-tag{ background:#1ab7ea }
+.port-card--yt    .port-tag{ background:#ff0033 }
+.port-card--imdb  .port-tag{ background:#f5c518; color:#111 }
+.port-card h4{
+  font-family:'Anton',sans-serif;
+  font-weight:400;
+  font-size: 1.7cqw;
+  letter-spacing:.04em;
+  color:var(--ink);
+  line-height:1.05;
+}
+.port-card p{
+  font-size: 1cqw; line-height:1.4; color:var(--muted);
+  font-family:'Inter',monospace,sans-serif;
+  letter-spacing:.04em;
+}
+
 /* ---------- COVER PAGE ---------- */
 .cover{
   align-items:center;
