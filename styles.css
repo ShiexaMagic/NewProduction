@@ -238,6 +238,13 @@ ul{list-style:none}
   text-align:left;
   box-shadow: 0 6px 16px rgba(0,0,0,.06);
   min-width:0;
+  display:block;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.logo-card:hover{
+  transform: translateY(-3px);
+  border-color: var(--blue);
+  box-shadow: 0 10px 22px rgba(31,109,214,.18);
 }
 .logo-card span{
   display:grid; place-items:center;
