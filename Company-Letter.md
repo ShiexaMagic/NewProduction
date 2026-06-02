@@ -1,0 +1,120 @@
+# NEWPRODUCTION
+
+**Film · TV · Social — Pre & Post Production**
+15A Lubliana Street, Tbilisi, Georgia
+Mail: lkukhashvili@gmail.com
+Phone / WhatsApp: +995 555 21 70 17 · +995 577 13 83 48
+
+---
+
+Dear Partner,
+
+It is our pleasure to introduce **NEWPRODUCTION** — a Tbilisi-based film and content studio that brings together five established Georgian companies under one roof. We were formed to give producers, broadcasters, agencies and platforms a single, accountable point of contact for the entire pipeline: development, production and post-production for film, television, commercials and social media.
+
+## Who We Are
+
+NEWPRODUCTION is the operating alliance of:
+
+- **SHUQI** — creative production and international co-productions.
+- **20STEPS** — branded content, commercials and social-first storytelling.
+- **ANIMATORY** — animation, motion design and stop-motion craft.
+- **CAUCASIAN FILM SERVICE (CFS)** — location production services and full crew.
+- **NEW VISION** — distribution insight, audience strategy and market reach.
+
+Together, the alliance operates owned studios, edit suites, grading rooms and a secure 24/7 remote-working server infrastructure. Casting, VFX, motion, sound, animation and stop-motion are all delivered in-house.
+
+## Pre-Production
+
+We develop projects from first idea to first day on set:
+
+- Development and script work
+- Casting from our proprietary database
+- Location scouting across Georgia and the wider Caucasus
+- Storyboarding and previz
+- Budgeting and scheduling
+- Line production and permitting
+- Talent management liaison, self-tape direction, background and extras
+
+## Production
+
+A full kit and a full crew, ready to deploy:
+
+- Latest Sony cinema and field cameras
+- Full prime and zoom optics inventory
+- Gimbals for run-and-gun coverage
+- Steadicam, dolly and crane support
+- Cinema lighting and grip packages
+- Wireless audio and transmission
+- Reportage / documentary units, multi-cam social shoots, broadcast and TVC crews
+
+## Post-Production
+
+Three editing rooms equipped with the latest technology:
+
+- Offline and online editorial
+- Color grading on reference monitors
+- Theatrical projector finishing
+- Mastering for DCP, broadcast and web
+- Secure remote-working servers, versioned dailies and cross-site project sync
+
+## VFX, Motion & Animation
+
+- Compositing and clean-up
+- CG integration and matte painting
+- On-set VFX supervision
+- Title sequences and broadcast packages
+- 2D, 3D, cut-out and mixed-media animation
+- Social-native motion design
+
+## Sound & Stop-Motion
+
+- Original score and music supervision
+- Foley, ADR and voiceover
+- 5.1 / 7.1 / Dolby Atmos mixing
+- Puppet and armature builds
+- Miniature sets and frame-perfect rigs
+- Hybrid live-action / stop-motion
+
+## Equipment Summary
+
+| Category   | Format          | Bodies | Mount | Notes                  |
+|------------|-----------------|-------:|-------|------------------------|
+| Camera A   | 8K · LF         | 2      | E / PL| Flagship cine          |
+| Camera B   | 6K · S35        | 3      | E / EF| Run & gun              |
+| Camera C   | 4K · Broadcast  | 4      | B4    | Reportage              |
+| Optics     | Prime set       | 16     | PL/E  | T1.5 – T2.8            |
+| Optics     | Zoom set        | 6      | PL/E  | 17–300 range           |
+| Gimbals    | Heavy / Light   | 4      | —     | Handheld & vehicle     |
+| Lighting   | HMI / LED       | 40+    | —     | Full packages          |
+| Audio      | Wireless        | 12     | —     | Boom & lav             |
+| Grading    | Reference       | 3      | —     | HDR / Dolby Vision     |
+| Servers    | Shared          | —      | —     | Remote / 24-7          |
+
+## Portfolio & Credits
+
+- **Showreel (Vimeo):** https://vimeo.com/showcase/12268158
+- **Featured Film (YouTube):** https://www.youtube.com/watch?v=5InWFKgBuSk
+
+Selected IMDb credits from our team:
+
+- Levan Kukhashvili — https://www.imdb.com/name/nm4310594/
+- Vako Agladze — https://www.imdb.com/name/nm6190757/
+- Irakli Ivanishvili — https://www.imdb.com/name/nm3699043/
+- Vladimer Katcharava — https://www.imdb.com/name/nm3737104/
+- Nodar Nozadze — https://www.imdb.com/name/nm3651265/
+- Konstantin Esadze — https://www.imdb.com/name/nm4056950/
+- Gela Chinchaladze — https://www.imdb.com/name/nm3736543/
+- Imeda Tetradze — https://www.imdb.com/name/nm10732370/
+- Vano Gvaradze — https://www.imdb.com/name/nm6256444/
+
+---
+
+We would welcome the opportunity to discuss your next project. Whether you need a full turnkey production, a local service partner, a finishing house, or an animation and VFX unit, NEWPRODUCTION can scope, schedule and deliver.
+
+Please reach out at **lkukhashvili@gmail.com** or **+995 555 21 70 17 / +995 577 13 83 48** — we will respond within one business day.
+
+Warm regards,
+
+**Levan Kukhashvili**
+NEWPRODUCTION
+Tbilisi, Georgia
