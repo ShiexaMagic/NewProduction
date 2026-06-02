@@ -1,0 +1,515 @@
+/* =========================================================
+   NewProduction — Pitch deck styled after JAGAGRIP
+   - 16:9 slides
+   - Two moods: LIGHT (white bg, blue accent) / DARK (architectural)
+   - Bold, condensed display type
+   - Print-friendly: 1 slide per page
+   ========================================================= */
+
+:root{
+  --blue:     #1f6dd6;
+  --blue-2:   #1858a8;
+  --red:      #ed1c24;
+  --ink:      #2b2c2e;
+  --ink-2:    #3a3b3e;
+  --light:    #f4f4f4;
+  --light-2:  #ededed;
+  --muted:    #6b6c70;
+  --white:    #ffffff;
+  --maxw:     1280px;
+  --slideW:   1280px;   /* design width */
+  --slideH:   720px;    /* design height (16:9) */
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#0c0c0e;color:var(--ink)}
+body{
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px; line-height:1.4;
+  padding-bottom:60px;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ---------- TOP NAV (screen only) ---------- */
+.nav{
+  position:sticky; top:0; z-index:50;
+  background:rgba(15,15,18,.78); backdrop-filter:blur(10px);
+  border-bottom:1px solid #222;
+}
+.nav__inner{
+  max-width:var(--maxw); margin:0 auto;
+  display:flex; align-items:center; gap:18px;
+  padding:14px 24px;
+}
+.brand__name{
+  font-family:'Anton',sans-serif;
+  letter-spacing:.06em; color:#fff; font-size:18px;
+}
+.nav__links{
+  display:flex; gap:18px; flex-wrap:wrap;
+  margin-left:auto;
+}
+.nav__links a{
+  color:#cfd1d6; font-size:13px; font-weight:600;
+  letter-spacing:.04em; text-transform:uppercase;
+  padding:6px 2px; border-bottom:2px solid transparent;
+  transition:.2s;
+}
+.nav__links a:hover{color:#fff;border-color:var(--blue)}
+.pill-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:9px 18px; border-radius:999px;
+  background:var(--blue); color:#fff; font-weight:700;
+  font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+  border:0; cursor:pointer;
+}
+.pill-btn:hover{background:var(--blue-2)}
+
+/* ---------- SLIDE FRAME (16:9) ---------- */
+.slide{
+  position:relative; overflow:hidden;
+  width:min(100%, var(--slideW));
+  aspect-ratio: 16 / 9;
+  margin:28px auto;
+  border-radius:6px;
+  box-shadow:0 30px 80px rgba(0,0,0,.55), 0 4px 14px rgba(0,0,0,.4);
+  /* All text sizing inside uses cqw so it scales with the SLIDE,
+     not with the browser window. 1cqw = 1% of the slide width. */
+  container-type: inline-size;
+}
+.slide--light{ background:var(--light); color:var(--ink) }
+.slide--dark { background:var(--ink);  color:var(--white) }
+
+.slide__bg{ position:absolute; inset:0; z-index:0; pointer-events:none }
+.slide__inner{
+  position:relative; z-index:2;
+  width:100%; height:100%;
+  padding: 4.5% 5.5%;
+  display:flex; flex-direction:column;
+  overflow:hidden;
+}
+
+/* page number, bottom-right */
+.pageno{
+  position:absolute; bottom:3.2%; right:4%;
+  font-family:'Anton',sans-serif;
+  font-size: 3.6cqw;
+  letter-spacing:.04em; color:var(--ink); opacity:.85;
+  z-index:3;
+  line-height:1;
+}
+.pageno.light{ color:#fff }
+
+/* ---------- BACKGROUNDS ---------- */
+
+/* LIGHT — subtle gray curved lines (echo of JAGAGRIP white slide) */
+.slide__bg--lines-light{
+  background:
+    radial-gradient(120% 80% at 110% 50%,
+       rgba(0,0,0,.06), rgba(0,0,0,0) 60%),
+    repeating-linear-gradient(
+       115deg,
+       rgba(0,0,0,.045) 0 2px,
+       transparent 2px 36px),
+    linear-gradient(180deg, #f6f6f6, #ececec);
+}
+
+/* DARK — bold architectural curve pattern (echo of dark JAGAGRIP slides) */
+.slide__bg--lines-dark{
+  background:
+    radial-gradient(80% 60% at 50% 50%,
+       rgba(255,255,255,.04), rgba(0,0,0,0) 70%),
+    repeating-linear-gradient(
+       115deg,
+       rgba(255,255,255,.06) 0 2px,
+       transparent 2px 28px),
+    repeating-linear-gradient(
+       65deg,
+       rgba(255,255,255,.045) 0 2px,
+       transparent 2px 42px),
+    linear-gradient(180deg, #2c2d30, #1d1e21);
+}
+
+/* COVER — dark photographic mood (real photo + dark overlay for legibility) */
+.slide__bg--photo{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.35) 40%, rgba(0,0,0,.8)),
+    url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat,
+    #0d0d10;
+}
+
+/* ---------- TYPOGRAPHY (all sizes are slide-relative via cqw) ---------- */
+.h-blue, .h-white{
+  font-family:'Anton','Archivo Black',sans-serif;
+  font-weight:400;
+  letter-spacing:-.005em;
+  line-height:.92;
+  text-transform:none;
+}
+.h-blue{
+  color:var(--blue);
+  font-size: 8cqw;
+}
+.h-blue.h-blue--sub{
+  font-size: 5.4cqw;
+  margin-top:-.05em;
+}
+.h-blue.h-blue--small{
+  font-size: 3.4cqw;
+  margin-top: .55em;
+}
+.h-white{
+  color:#fff;
+  font-size: 7.4cqw;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+}
+
+/* ---------- TWO COLUMN LAYOUT ---------- */
+.two-col{
+  flex:1; min-height:0;
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 4%;
+  align-items:center;
+}
+.two-col > div:first-child{ min-width:0 }
+
+/* ---------- BULLETS (JAGAGRIP style) ---------- */
+.bul{
+  margin-top: .9em;
+  font-family:'Inter',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  font-size: 1.45cqw;
+  letter-spacing:.04em;
+  color:var(--ink);
+  line-height:1.55;
+}
+.bul li{
+  position:relative;
+  padding-left: 1.4em;
+}
+.bul li::before{
+  content:"";
+  position:absolute; left:.15em; top:.65em;
+  width:.45em; height:.45em; border-radius:50%;
+  background: var(--ink);
+}
+.bul--indent{ margin-left: 2.4em }
+
+/* ---------- HERO FIGURE (placeholder graphic per slide) ---------- */
+/* ---------- HERO FIGURES — REAL STOCK PHOTOS ---------- */
+.hero-figure{
+  width:100%; aspect-ratio: 4/3;
+  border-radius:8px;
+  position:relative; overflow:hidden;
+  box-shadow: 0 14px 30px rgba(0,0,0,.22);
+  background:#0b0b0c center/cover no-repeat;
+}
+/* subtle gradient overlay for cohesion */
+.hero-figure::before{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.25));
+  pointer-events:none;
+}
+.hero-figure--reel   { background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1400&q=80'); }   /* cinema camera body close-up */
+.hero-figure--clap   { background-image: url('PreProduction.png'); }
+.hero-figure--camera { background-image: url('Production.jpg'); }
+.hero-figure--edit   { background-image: url('Post%20Production.jpg'); }
+.hero-figure--vfx    { background-image: url('VFX.jpg'); }
+.hero-figure--sound  { background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1400&q=80'); }   /* mixing console */
+
+/* ---------- PARTNER GRID ---------- */
+.partner-grid{
+  margin-top: 3.5cqw;
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.4%;
+}
+.logo-card{
+  background:#fff;
+  border:1px solid #e2e3e7;
+  border-radius:8px;
+  padding: 1.6cqw 1.4cqw 1.2cqw;
+  text-align:left;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  min-width:0;
+}
+.logo-card span{
+  display:grid; place-items:center;
+  width: 3.4cqw; height: 3.4cqw; min-width:34px; min-height:34px;
+  border-radius:10px;
+  background: var(--blue); color:#fff;
+  font-family:'Anton',sans-serif;
+  font-size: 1.5cqw;
+  letter-spacing:.04em;
+  margin-bottom: 1cqw;
+}
+.logo-card h4{
+  font-family:'Anton',sans-serif;
+  font-weight:400;
+  font-size: 1.35cqw;
+  letter-spacing:.04em;
+  color:var(--ink);
+  margin-bottom: .35em;
+  line-height:1.05;
+}
+.logo-card p{
+  font-size: 1cqw; line-height:1.4; color:var(--muted);
+}
+
+/* ---------- COVER PAGE ---------- */
+.cover{
+  align-items:center;
+  justify-content: space-between;
+  text-align:center;
+  padding: 5% 6% 5%;
+  gap: 2%;
+}
+.cover__center{
+  width:100%;
+  display:flex; flex-direction:column; align-items:center;
+}
+.wordmark{
+  font-family:'Archivo Black','Anton',sans-serif;
+  color:#fff;
+  font-weight:900;
+  font-size: 10cqw;
+  letter-spacing:-.01em;
+  line-height:.92;
+}
+.since{
+  margin-top: 1.4em;
+  color:#fff; letter-spacing:.45em;
+  font-size: 1.2cqw;
+  font-weight:600;
+}
+.tag-pill{
+  display:inline-block;
+  margin-top: 2.4em;
+  padding: .9em 2em;
+  border:1.5px solid rgba(255,255,255,.9);
+  border-radius:999px;
+  color:#fff;
+  font-size: 1.15cqw;
+  letter-spacing:.18em;
+  font-weight:600;
+  text-transform:uppercase;
+  white-space: nowrap;
+}
+.cover__addr{
+  color:#fff; opacity:.95;
+  margin-top: 1.4em;
+  font-size: 1.05cqw;
+  letter-spacing:.14em;
+  font-weight:600;
+  text-transform:uppercase;
+  line-height:1.7;
+  max-width: 86%;
+}
+.cover__contacts{
+  width:100%;
+  display:flex; justify-content:space-between; align-items:flex-end;
+  flex-wrap:wrap; gap: 6px 24px;
+  color:#fff;
+  font-size: 1cqw;
+  letter-spacing:.18em;
+  font-weight:600;
+  text-transform:uppercase;
+}
+.cover__contacts p{ line-height:1.6 }
+.cover__contacts p:first-of-type{ text-align:left }
+.cover__contacts > *:not(:first-child){ text-align:right }
+
+/* ---------- EQUIPMENT (DARK) ---------- */
+.equipment .h-white{ margin-bottom: .15em; text-align:right; align-self:flex-end; line-height:.9 }
+.eq-grid{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3%;
+  align-items:stretch;
+  margin-top: 2%;
+  flex:1; min-height:0;
+}
+.eq-photos{
+  display:flex; flex-direction:column; gap: 1.2cqw;
+}
+.eq-photo{
+  width:100%; flex:1; min-height:0; border-radius:6px;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow: 0 10px 22px rgba(0,0,0,.4);
+  background:#0b0b0c center/cover no-repeat;
+}
+.eq-photo--cam    { background-image: url('Equipment.jpg'); }
+.eq-photo--gimbal { background-image: url('https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&q=80'); }   /* gimbal rig */
+.eq-table{
+  width:100%; border-collapse: collapse;
+  font-family:'Inter',sans-serif;
+  font-size: 1.1cqw;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:#fff;
+  table-layout: fixed;
+}
+.eq-table th, .eq-table td{
+  border:1px solid rgba(255,255,255,.85);
+  padding: .55em .6em;
+  text-align:center;
+  font-weight:600;
+  white-space: nowrap;
+  overflow:hidden; text-overflow:ellipsis;
+}
+.eq-table thead th{
+  background:transparent;
+  font-family:'Anton',sans-serif;
+  font-weight:400;
+  letter-spacing:.08em;
+}
+.eq-table tbody td:first-child{
+  font-family:'Anton',sans-serif;
+  letter-spacing:.06em;
+}
+
+/* ---------- STUDIOS (DARK) ---------- */
+.studios .h-white{ text-align:left; line-height:.9 }
+.studio-grid{
+  margin-top: 2%;
+  display:grid;
+  grid-template-columns: 1fr 1.15fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.2cqw;
+  flex:1; min-height:0;
+}
+.studio-photo{
+  border-radius:4px;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow: 0 10px 22px rgba(0,0,0,.45);
+  background:#0b0b0c center/cover no-repeat;
+  min-width:0; min-height:0;
+}
+.studio-photo--p1{
+  grid-row: 1 / 2;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1400&q=80'); /* sound stage lights */
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.studio-photo--p2{
+  grid-row: 2 / 3;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=1400&q=80'); /* film set */
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.studio-photo--p3{
+  grid-row: 2 / 3;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1400&q=80'); /* editing suite */
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.studio-plan{
+  grid-row: 1 / 2;
+  background:#fff;
+  border-radius:4px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.45);
+  padding: 2.4cqw 1.6cqw 2cqw;
+  position:relative;
+  min-width:0; min-height:0;
+}
+.plan-box{
+  position:relative;
+  width:100%; height:100%;
+  border:2px solid #111;
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,.12) 1px, transparent 1px);
+  background-size: 6% 10%;
+}
+.plan-box::before{
+  /* door notch */
+  content:""; position:absolute; top:-2px; left:40%;
+  width:14%; height:14%;
+  background:#fff;
+  border-left:2px solid #111;
+  border-right:2px solid #111;
+  border-bottom:2px solid #111;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.plan-w, .plan-h, .plan-d, .plan-call{
+  position:absolute;
+  font-family:'Anton',sans-serif;
+  font-size: 1cqw;
+  letter-spacing:.04em;
+  color:var(--red);
+  white-space: nowrap;
+}
+.plan-w{ top:-1.6cqw; left:50%; transform:translateX(-50%) }
+.plan-h{ top:50%; left:-.4cqw; transform:translate(-100%, -50%) rotate(-90deg); transform-origin:right center }
+.plan-d{ bottom:-1.6cqw; left:50%; transform:translateX(-50%) }
+.plan-call{
+  bottom:8%; left:50%; transform:translateX(-50%);
+  background: rgba(255,255,255,.85);
+  padding: 2px 8px; border-radius: 2px;
+}
+.suite-bar{
+  display:grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1cqw;
+  margin-top: 1.2cqw;
+}
+.suite-bar li{
+  border:1px solid rgba(255,255,255,.85);
+  padding: .9cqw 1.2cqw;
+  display:flex; flex-direction:column; align-items:flex-start;
+  gap: .2cqw;
+  color:#fff;
+}
+.suite-bar b{
+  font-family:'Anton',sans-serif;
+  font-weight:400;
+  font-size: 1.7cqw;
+  letter-spacing:.06em;
+  line-height:1;
+}
+.suite-bar span{
+  font-size: 1cqw;
+  letter-spacing:.12em; text-transform:uppercase; color:#cfd1d6;
+  font-weight:600;
+  line-height:1.2;
+}
+
+/* ---------- RESPONSIVE (mobile preview shrinks 16:9) ---------- */
+@media (max-width: 980px){
+  .nav__links{ display:none }
+  .two-col{ grid-template-columns: 1fr; gap: 16px; }
+  .hero-figure{ aspect-ratio: 16/9 }
+  .partner-grid{ grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .eq-grid{ grid-template-columns: 1fr; gap: 12px }
+  .eq-photos{ flex-direction:row }
+  .studio-grid{ grid-template-columns: 1fr; grid-template-rows: auto auto auto auto; }
+}
+
+/* ---------- PRINT / PDF EXPORT (1 slide per page) ---------- */
+@page{ size: 16in 9in; margin: 0 }
+@media print{
+  body{ background:#fff; padding:0 }
+  .no-print, .nav{ display:none !important }
+  .slide{
+    width: 16in; height: 9in;
+    margin: 0; border-radius: 0;
+    box-shadow:none;
+    page-break-after: always;
+    break-after: page;
+  }
+  .slide:last-of-type{ page-break-after: auto }
+}

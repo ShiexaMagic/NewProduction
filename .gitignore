@@ -1,0 +1,17 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vercel
+.vercel
+
+# Reference / source material (not part of the site)
+Jaga Grip.pdf
+_pdf_preview/
+_render_*.ps1
