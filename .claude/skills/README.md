@@ -6,3 +6,9 @@ Vendored from [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) (M
 - `redesign-existing-projects`: audit-first upgrade checklist for an existing site (fits this repo's `index.html` + `styles.css`).
 
 Claude Code loads these automatically from `.claude/skills/`. Invoke with `/design-taste-frontend` or `/redesign-existing-projects`.
+
+Vendored from [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (MIT, commit `aeb45e2`).
+
+- `caveman`: terse reply style that cuts filler but keeps every technical fact. On until "stop caveman" or "normal mode".
+- `ultracave`: maximum compression variant (`/ultracave` or `/caveman ultra`).
+- `megacave`: Classical Chinese variant (`/megacave` or `/caveman wenyan`).
